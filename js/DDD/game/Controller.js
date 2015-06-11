@@ -1,12 +1,16 @@
 define(['DDD/game/Model','DDD/level/Model'], function(GameModel,LevelModel){
  	Game.currentGame;
+	Game.currentLocation;
 	function Game(options){
 		options = options || {}
 		if(options.levels) var levels = LevelModel.createFromArray(options.levels);
-		
 		this.name = options.name;
 		this.levels = levels;
 		this.startDate = new Date(options.startDate) || new Date();
+		this.currentLevelNumber = options.currentLevelNumber || 0;
+		this.currentLevel = options.currentLevel ? new LevelModel(options.currentLevel):undefined
+
+		this.getNextLevel = getNextLevel;
 	}
 		
 	Game.new = function Start(options){
@@ -17,38 +21,31 @@ define(['DDD/game/Model','DDD/level/Model'], function(GameModel,LevelModel){
 		
 		return game;
 	}
-
-	Game.unlockLevel = function (data,callback){
-		var game = Game.currentGame;
-		var level = game.currentLevel;
-		if(level.riddle === data.answer){
-			game.currentLevelNumber++;
-			game.currentLevel = game.levels[game.currentLevelNumber];
-			console.log("success");
-		} else {
-			console.log("bummer");
-		}
-		if(game.currentLevelNumber > game.levels.length)
-			game.endGame();
-	}
-
+	
 	Game.save = function Save(game){
 		localStorage.setItem("game",JSON.stringify(game));
 		return game;	
 	}
-
+	Game.setLocation = function(location){
+		Game.currentGame.currentLocation = location;
+		Game.currentLocation = location;
+		Game.save(Game.currentGame);
+	}
+	
 	Game.load = function Load(game){
-		game = localStorage.getItem("game");
+		var game = localStorage.getItem("game");
 		if (game != "" && game != undefined)
 			game = new Game(JSON.parse(game));
 		else
-			game = undefined;
-			
+			return game = undefined;
+		
 		if(game.currentLevel === undefined ){
 			game.currentLevel = game.levels[0];
 			game.currentLevelNumber = 0;
-			console.log("what is this");
-		}			
+		}		
+		Game.currentGame = game;
+		Game.currentLocation = game.currentLocation;
+		console.log(game);
 		return game;
 	}
 	
@@ -57,7 +54,17 @@ define(['DDD/game/Model','DDD/level/Model'], function(GameModel,LevelModel){
 		return null;
 	}
 	
+	function getNextLevel(){
+		this.currentLevelNumber ++;
+		this.currentLevel = this.levels[this.currentLevelNumber - 1];
+		return this.currentLevel;
+	}
 
+	function getPrevLevel(){
+		this.currentLevelNumber --;
+		this.currentLevel = this.levels[this.currentLevelNumber - 1];
+		return this.currentLevel;
+	}
 
 	return Game;
 

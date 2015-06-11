@@ -1,4 +1,4 @@
-define(["Config","DDD/game/Controller","views/newGame","WindowController"],function(Config,GameController,newGameView,WindowController){
+define(["Config","DDD/game/Controller","views/newGame","WindowController","GameController"],function(Config,GameController,newGameView,WindowController,GameLogic){
 	
 	function start(data){
 		newGameView.render();
@@ -15,13 +15,15 @@ define(["Config","DDD/game/Controller","views/newGame","WindowController"],funct
 		
 		var gamename = $("#gamename").val();
 		var levels = [
-			{location: [123,234], riddle:"test"},
-			{location: [123,234],riddle:"test2"}
+			{data:"test",type:"riddle",question:"hoe laat is het?"},
+			{data:"test2",type:"riddle",question:"hoe gaath et met je."},
+			{data:{latitude:50.854975,longitude:4.3753899,distance:10},type:"location",question:"Ga naar de locatie."},
+			{data:{latitude:51.034855,longitude:4.459515,distance:10},type:"location",question:"Ga naar de locatie."}
 		]; 
 		
 		var game = GameController.new({name:gamename,levels:levels});
 		GameController.save(game);
-		WindowController.renderView("startGame",game);
+		GameLogic.playNextLevel();
 		
 	}
 

@@ -8,8 +8,9 @@ define(["Config","DDD/game/Controller","views/startGame","WindowController","Gam
 	}
 
 	function updateInterface(game){
+		$("#answer").val("");
 		$("#label").html(game.name);
-	
+		$("#question").html(game.currentLevel.question);
 	}
 
 	function bindEvents(){

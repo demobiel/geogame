@@ -2,29 +2,17 @@ define(["Config","DDD/game/Controller","views/startGame","WindowController","Gam
 	
 	function start(data){
 		var game = GameController.currentGame;
-		homeGameView.render(game);
-		updateInterface(game);
-		bindEvents(game);
+		homeGameView.render();
+		updateInterface();
+		bindEvents();
 	}
 
-	function updateInterface(game){
-		$("#label").html(game.name);
-	
+	function updateInterface(){	
 	}
 
 	function bindEvents(){
 		$("#stopgame").unbind();
 		$("#stopgame").bind("click",function(){stopGame()});
-		$("#verify").unbind();
-		$("#verify").bind("click",function(){verifyNextStep()});
-	}
-
-	function verifyNextStep(){
-		var data = {
-			answer: $("#answer").val()
-		};
-		GameLogic.verifyLevel(data);
-	
 	}
 
 	function stopGame(){

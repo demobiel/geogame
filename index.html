@@ -24,7 +24,8 @@
 		}
 		
 		.view{
-			display:none
+			display:none;
+			height:400px;
 		}
 
 	</style>
@@ -32,6 +33,11 @@
 </head>
 
 <body>
+
+	<div id="header" class="header">
+		<button onclick="" id="stopgame">stop game</button>
+	</div>
+
 	<div id="home" class="view">
 		<button onclick="" id="newgame">Start game</button>
 	</div>
@@ -40,12 +46,23 @@
 		<input type="field" id="gamename"></input><br>
 		<button onclick="" id="startgame">start game</button>
 	</div>
-	<div id="startGame" class="view">
-		Game <span id="label"> </span> has started<br>
+	<div id="riddleLevel" class="view">
+		<div id="question"></div>
 		<input type="field" id="answer"></input><br>
-		<button id="verify"></input><br>
-		<button onclick="" id="stopgame">stop game</button>
-		
+		<button id="verify">Go</input><br>
+	</div>
+	<div id="locationLevel" class="view">
+		<div id="map"></div>
+
+		<div id="dataholder"></div>
+	</div>	
+	<div id="endGame" class="view">
+		The game has ended<br>
+		<input type="field" id="gamename"></input><br>
+		<button onclick="" id="startgame">start game</button>
+	</div>
+	<div id="footer" class="footer">
+		<button id="skipLevel">skip level</button>
 	</div>
 </body>
 
