@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Leaflet mobile example</title>
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<script data-main="js/main" src="./js/require.js"></script>
+
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		html, body, #map {
+			height: 100%;
+		}
+		
+		.view{
+			display:none
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="home" class="view">
+		<button onclick="" id="newgame">Start game</button>
+	</div>
+	<div id="newGame" class="view">
+		Welcome in the new game<br>
+		<input type="field" id="gamename"></input><br>
+		<button onclick="" id="startgame">start game</button>
+	</div>
+	<div id="startGame" class="view">
+		Game <span id="label"> </span> has started<br>
+		<input type="field" id="answer"></input><br>
+		<button id="verify"></input><br>
+		<button onclick="" id="stopgame">stop game</button>
+		
+	</div>
+</body>
+
+</html>
+
