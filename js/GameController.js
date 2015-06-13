@@ -1,4 +1,4 @@
-define(["DDD/game/Controller","windowController"],function(GameController,WindowController){
+define(["DDD/game/Controller","WindowController"],function(GameController,WindowController){
 		
 	start = function Start(){
 		//try to load game from disk

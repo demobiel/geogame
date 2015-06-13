@@ -5,7 +5,7 @@
 		"longitude": 3.722093,
 		"distance":0.02
 	},
-	"description": "uw thuisspot"
+	"question": "uw thuisspot"
 },{
 	"type": "location",
 	"data": {
@@ -13,7 +13,7 @@
 		"longitude": 3.727485,
 		"distance":0.02
 	},
-	"description": "het mooiste terras van Gent, lekker pint!"
+	"question": "het mooiste terras van Gent, lekker pint!"
 },{
 	"type": "location",
 	"data": {
@@ -21,7 +21,7 @@
 		"longitude": 3.722007,
 		"distance":0.02
 	},
-	"description": "Spitter spetter spater, dit is aan het water"
+	"question": "Spitter spetter spater, dit is aan het water"
 },{
 	"type": "location",
 	"data": {
@@ -29,7 +29,7 @@
 		"longitude": 3.728809,
 		"distance":0.02
 	},
-	"description": "Tijd voor een koffie!"
+	"question": "Tijd voor een koffie!"
 },{
 	"type": "location",
 	"data": {
@@ -37,7 +37,7 @@
 		"longitude": 3.734431,
 		"distance":0.02
 	},
-	"description": "Almost there!"
+	"question": "Almost there!"
 },{
 	"type": "location",
 	"data": {
@@ -45,6 +45,6 @@
 		"longitude": 3.731116,
 		"distance":0.02
 	},
-	"description": "The final countdown!"
+	"question": "The final countdown!"
 }
 ]
