@@ -1,0 +1,61 @@
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+		}
+
+		html, body, #map {
+			height: 100%;
+		}
+		
+		.view{
+			display:none;
+			height:400px;
+			padding:0px 10px 0px 10px;
+			margin-left:auto;
+			margin-right:auto;
+			overflow:scroll;
+
+		}
+		.footer {
+ 			position:fixed;
+  			bottom:0;
+  			background-color:#1fa67a;
+  			height:50px;
+  			width:100%;
+  			z-index:1;
+  			padding:10px 0px 0px 10px;
+		}
+		
+		.header {
+ 			position:fixed;
+  			top:0;
+  			background-color:#1fa67a;
+  			height:50px;
+  			width:100%;
+  			padding:10px 0px 0px 10px;
+  			z-index:1;
+		}		
+		.content {
+			position:absolute;
+			top:60px;
+			width:100%;
+			background-color:#eeeeee;
+		}
+		.button-warning {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+        .white-icon{
+        	color:white;
+        }
+        .center{
+	        display: block;
+        	margin: 0 auto;
+			text-align:center;
+        }
+		#mapholder{
+			height:300px;
+		}
+	</style>

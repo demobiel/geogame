@@ -12,19 +12,12 @@ define(["Config","DDD/game/Controller","views/newGame","WindowController","GameC
 
 	function newGame(){
 		
-		
-		var gamename = $("#gamename").val();
-		var levels = [
-			{data:"test",type:"riddle",question:"hoe laat is het?"},
-			{data:"test2",type:"riddle",question:"hoe gaath et met je."},
-			{data:{latitude:50.854975,longitude:4.3753899,distance:10},type:"location",question:"Ga naar de locatie."},
-			{data:{latitude:51.034855,longitude:4.459515,distance:10},type:"location",question:"Ga naar de locatie."}
-		]; 
-		
-		var game = GameController.new({name:gamename,levels:levels});
-		GameController.save(game);
-		GameLogic.playNextLevel();
-		
+		$.get("data/levels.json",function(data){
+			var levels = data;
+			var game = GameController.new({name:"doeterniettoe",levels:levels,startDate:new Date()});
+			GameController.save(game);
+			GameLogic.playNextLevel();
+		})
 	}
 
 	return {

@@ -1,0 +1,50 @@
+[{ 
+	"type": "location",
+	"data": {
+		"latitude": 51.046378,
+		"longitude": 3.722093,
+		"distance":0.02
+	},
+	"description": "uw thuisspot"
+},{
+	"type": "location",
+	"data": {
+		"latitude": 51.047448,
+		"longitude": 3.727485,
+		"distance":0.02
+	},
+	"description": "het mooiste terras van Gent, lekker pint!"
+},{
+	"type": "location",
+	"data": {
+		"latitude": 51.056251,
+		"longitude": 3.722007,
+		"distance":0.02
+	},
+	"description": "Spitter spetter spater, dit is aan het water"
+},{
+	"type": "location",
+	"data": {
+		"latitude": 51.051450, 
+		"longitude": 3.728809,
+		"distance":0.02
+	},
+	"description": "Tijd voor een koffie!"
+},{
+	"type": "location",
+	"data": {
+		"latitude": 51.049453, 
+		"longitude": 3.734431,
+		"distance":0.02
+	},
+	"description": "Almost there!"
+},{
+	"type": "location",
+	"data": {
+		"latitude": 51.042354, 
+		"longitude": 3.731116,
+		"distance":0.02
+	},
+	"description": "The final countdown!"
+}
+]

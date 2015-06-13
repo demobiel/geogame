@@ -33,6 +33,7 @@ define([
 							}});
 					}
 		})
+		$("#dataholder").html(level.question);
 	}
 
 	function bindEvents(){

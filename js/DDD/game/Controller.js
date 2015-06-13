@@ -6,7 +6,7 @@ define(['DDD/game/Model','DDD/level/Model'], function(GameModel,LevelModel){
 		if(options.levels) var levels = LevelModel.createFromArray(options.levels);
 		this.name = options.name;
 		this.levels = levels;
-		this.startDate = new Date(options.startDate) || new Date();
+//		this.startDate = options.startDate ? new Date(options.startDate) : new Date();
 		this.currentLevelNumber = options.currentLevelNumber || 0;
 		this.currentLevel = options.currentLevel ? new LevelModel(options.currentLevel):undefined
 

@@ -56,7 +56,7 @@ define(["DDD/game/Controller","windowController"],function(GameController,Window
 	}
 
 	function showErrorMessage(message){
-		alert(message);
+		//alert(message);
 	}
 
 	return {

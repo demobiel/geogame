@@ -16,8 +16,12 @@ define(["Config","DDD/game/Controller","views/startGame","WindowController","Gam
 	}
 
 	function stopGame(){
-		GameController.clearDisk();
-		WindowController.renderView("home");
+		if(confirm("Bent u zeker dat u wil herbeginnen?")===true){	
+			GameController.clearDisk();
+			WindowController.renderView("home");
+		}
+
+
 	}
 
 	return {

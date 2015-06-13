@@ -35,8 +35,8 @@
   			},
   			geolocation:{
   				enableHighAccuracy: false,
-  				maximumAge:10000,
-  				timeout:1
+  				maximumAge:0,
+  				timeout:10000
   			}
         }, options );
 		

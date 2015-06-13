@@ -7,62 +7,73 @@
 
 	<title>Leaflet mobile example</title>
 
-
+	<link rel="stylesheet" href="css/pure-min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script data-main="js/main" src="./js/require.js"></script>
 
-	<style>
-		body {
-			padding: 0;
-			margin: 0;
-		}
 
-		html, body, #map {
-			height: 100%;
-		}
-		
-		.view{
-			display:none;
-			height:400px;
-		}
-
-	</style>
 
 </head>
 
 <body>
 
 	<div id="header" class="header">
-		<button onclick="" id="stopgame">stop game</button>
+			<button onclick="" id="stopgame" class="pure-button button-warning"><i class="fa fa-times white-icon"></i></button>
 	</div>
-
-	<div id="home" class="view">
-		<button onclick="" id="newgame">Start game</button>
-	</div>
-	<div id="newGame" class="view">
-		Welcome in the new game<br>
-		<input type="field" id="gamename"></input><br>
-		<button onclick="" id="startgame">start game</button>
-	</div>
-	<div id="riddleLevel" class="view">
-		<div id="question"></div>
-		<input type="field" id="answer"></input><br>
-		<button id="verify">Go</input><br>
-	</div>
-	<div id="locationLevel" class="view">
-		<div id="map"></div>
-
-		<div id="dataholder"></div>
-	</div>	
-	<div id="endGame" class="view">
-		The game has ended<br>
-		<input type="field" id="gamename"></input><br>
-		<button onclick="" id="startgame">start game</button>
+	<div id="content" class="content">
+		<div id="home" class="view">
+			<br>
+			<img src="img/logo.png" class="center">
+			<h1 class="center">Geohunter</h1>
+			<br><br>
+			<button onclick="" id="newgame" class="pure-button center"><i class="fa fa-play"></i> Start game</button>
+		</div>
+		<div id="newGame" class="view">
+			<div class="center">
+				<br>
+				<p>
+				Welkom op uw verjaardagsweekend!
+				</p>
+				<p>
+				Ontdek de stad waar je zo van houdt, en misschien ontdek je nog wel andere dingen.<br>
+				Kijk goed rond je heen en misschien kom je wel interessante mensen tegen!
+				</p>
+				<p>
+				Je kan het spel altijd opnieuw beginnen door op het rode kruis te duwen, of je kan een opdracht overslaan door op "Skip" te duwen.
+				</p>
+				
+				<button onclick="" id="startgame" class="pure-button center"><i class="fa fa-play"></i>  Start game</button>
+			</div>
+		</div>
+		<div id="riddleLevel" class="view">
+			<div class="center">
+			<form class="pure-form">
+				<fieldset>
+				<legend id="question"></legend>
+				<input type="text" id="answer"></input><br>
+				<button id="verify" class="pure-button pure-button-primary">Go</input><br>
+				</fieldset>
+			</form>
+			</div>
+		</div>
+		<div id="locationLevel" class="view">
+			<div id="mapholder">
+				<div id="map"></div>
+			</div>
+			<div class="center" id="dataholder"></div>
+		</div>	
+		<div id="endGame" class="view">
+			The game has ended<br>
+			<input type="field" id="gamename"></input><br>
+			<button onclick="" id="startgame">start game</button>
+		</div>
 	</div>
 	<div id="footer" class="footer">
-		<button id="skipLevel">skip level</button>
+		<button id="skipLevel" class="pure-button">Skip level</button>
 	</div>
 </body>
 
